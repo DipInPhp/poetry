@@ -1,0 +1,80 @@
+page{
+  background-color: #aec6c6;
+  color: #066068;
+  background-repeat: no-repeat;
+  background-position:0% 90%;
+}
+.icon1{
+  width: 456rpx;
+  height:174rpx;
+   margin-left: 40rpx; 
+  padding: 20rpx 10rpx;
+
+}.yinyue{
+  width: 42rpx;
+  height: 42rpx;
+  margin-bottom:140rpx;
+  margin-left: 30rpx;
+
+  padding: 20rpx 10rpx;
+
+}.yinyue{
+  width: 42rpx;
+  height: 42rpx;
+  margin-bottom:140rpx;
+  margin-left: 30rpx;
+}
+.yuanbao{
+  width: 42rpx;
+  height: 26rpx;
+  float: left;
+  margin-top:35rpx;
+  margin-left: 20rpx;
+  
+}
+.yuanbao-tip{
+  width: 42rpx;
+  height: 26rpx;
+  float: left;
+  margin-top:25rpx;
+  margin-left: 20rpx;
+  color: #006666
+  
+}
+.rank{
+  text-align: center;
+  width: 60%;
+  height: 80rpx;
+  margin:30rpx auto;
+  line-height: 80rpx;
+  border-radius:40rpx; 
+  background-color: #3d8d96;
+  color: #fffffd;
+  letter-spacing: 20rpx;
+}
+.esc{
+  font-size: 60rpx;
+  margin-left:41%;
+  writing-mode:vertical-rl;
+  direction:rtl;
+
+}
+.jiantou{
+  margin:0rpx auto;
+  text-align: center;
+}
+.jiantou image{
+   width:60rpx; 
+   height:75rpx;
+}
+.xia{
+  text-align: center;
+  font-size:24rpx;
+  padding-bottom:20rpx; 
+}
+.all{
+  margin-top:100rpx;
+}
+.button-hover{
+  background-color: #5e70f6;
+}
