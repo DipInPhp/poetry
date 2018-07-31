@@ -1,0 +1,33 @@
+<view>
+  <view class='t0'>活动介绍</view>
+  <view class='t1'>欢迎大家进入“唐诗宋词猜猜乐”小程序。</view>
+  <view class='t2'>{{title}}</view>
+
+  <view class='t4'>{{active1}}</view>
+  <view class='t5'>{{active2}}</view>
+  <view class='tip'>{{active3}}<text class='ming'>{{tip}}</text>{{active4}}</view>
+ 
+</view>
+
+<view class='huafei' style='display:{{status==1?"inline-block":"none"}};'>
+<view class='title'>请在此处领取奖励</view>
+<form bindsubmit="formSubmit">
+  <view style='width:70%;'><text class='sjh'>手机号</text><input bindinput='input' bindfocus='foucus' type='number' disabled='{{money?false:true}}' placeholder='{{money?"输入手机号":"暂无领取资格"}}' name="mobile" class='mo-inp' maxlength="11" auto-focus="{{autofocu}}" confirm-type="done"></input>
+  </view>
+  <block wx:if="{{money}}">
+    <button hover-class='button-hover' disabled='{{disabled}}' formType="submit" class='yanzheng' data-id="2" bindtap="getCode">{{time}}</button>
+  </block>
+  <view style='margin-left:20rpx;color:{{col}};'>{{tishi}}</view>
+
+    <view class='yzz'><text class='yzm'>验证码</text><input type='number' disabled='{{money?false:true}}' placeholder='{{money?"手机验证码":"暂无领取资格"}}' name="yzm" class='yan-inp' maxlength="6"></input>
+  </view>
+  <view style='margin-left:20rpx;color:#f00;'>{{money?err:""}}</view>
+  <!-- <view><text>奖励金额</text><input type='text' name="money" value='{{money}}' disabled='true' confirm-type="done"></input></view> -->
+  <view><text class='jlj'>奖励话费</text><input type='text' name="money" value='{{money?money:"您暂无奖励可领"}}' disabled='true' confirm-type="done"></input></view> 
+   <block wx:if="{{money}}">
+    <button hover-class='button-hover' class='chbtn' formType="submit"  data-id="1">确定</button>
+    </block>
+     <view style='text-align:center;'>话费将在10分钟之内到账，请注意短信查收</view>
+     <view style='text-align:center;padding-bottom:20rpx;'>---- 此活动解释权归运营方所有 ----</view>
+</form>
+</view>

@@ -1,0 +1,58 @@
+<view class="title">
+  <image src='/pages/image/yuanbao.png' class='icon1'></image>
+ <text class='coin'  style='width:40rpx;'> {{score?score:'0'}}</text>
+ <image src='/pages/image/logo.png' class="logo"></image>
+<block wx:if="{{yinyue_status == 1}}">
+<image class="yinyue" bindtap='stop' src='/pages/image/guanbiyinyue.png'></image>
+</block>
+<block wx:if="{{yinyue_status == 2}}">
+<image class="yinyue" bindtap='start' src='/pages/image/kaiqiyinyue.png'></image>
+</block>
+</view>
+<view class='guan'>————————<text style='padding:0 60rpx;'>第{{guan?guan:1}}关</text>————————</view>
+<view class='qus'>
+  <view class="question">{{question?question:'题目加载中请稍后'}}</view>
+  <view class='tip'>请接诗词的{{status}}</view>
+</view>
+
+<view class="body" style='background-color:{{bgcolor}};width:{{width}};'></view>
+<view class="answer">
+<form bindsubmit="formSubmit" report-submit="true">
+  <input type='text' name='answer' style='display:none;' value='{{answer1}}'></input>
+ <button  hover-stay-time="1000" hover-class="button-hover" disabled='{{disable}}'   plain='true' formType="submit" class='an'>A.<text>{{answer1?answer1:"山水接天地"}}</text>
+</button>
+
+</form>
+<form bindsubmit="formSubmit" report-submit="true">
+ <input type='text' style='display:none;' name="answer" value='{{answer2}}'></input>
+  <button  hover-stay-time="1000" hover-class="button-hover" disabled='{{disable}}' plain='true' formType="submit" class='an' style='text-decoration:{{line2}};color:{{color2}};'>B.<text>{{answer2?answer2:"枯木又逢春"}}</text>
+</button>
+</form>
+<form bindsubmit="formSubmit" report-submit="true">
+<input type='text' style='display:none;' name="answer" value='{{answer3}}'></input>
+  <button  hover-stay-time="1000" hover-class="button-hover" disabled='{{disable}}' plain='true' formType="submit" class='an'  >C.<text>{{answer3?answer3:"难于上青天"}}</text>
+</button>
+</form>
+<form bindsubmit="formSubmit" report-submit="true">
+<input type='text' style='display:none;' name="answer" value='{{answer4}}'></input>
+   <button  hover-stay-time="1000" hover-class="button-hover" disabled='{{disable}}' plain='true' formType="submit" class='an' >D.<text>{{answer4?answer4:"花前月下酒"}}</text>
+   </button>
+    </form>
+</view>
+ 
+
+ <modal 
+    title="帮助成功，你也来闯关吧！"
+     hidden="{{hidden}}"
+     confirm-text="进入我的闯关"
+     cancel-text="收藏这首诗"
+     bindconfirm="confirm"
+     bindcancel="cancel" data-openid="{{openid1}}" data-poetry="{{contentid}}">
+     <view>你成功的帮助了你的好友
+     <image style='width:60rpx;height:60rpx;border-radius:60rpx;' src='{{img}}'></image>，你选择的答案已经推送给Ta，你也来玩吧！</view>
+     
+  </modal>
+  
+ 
+<button hover-class="button-hover" bindtap='gohome' class='go-btn'>进入我的猜诗词</button>
+
